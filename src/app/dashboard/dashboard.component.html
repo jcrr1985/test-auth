@@ -1,0 +1,33 @@
+<div class="grid grid-cols-12">
+    <div class="col-span-3">
+        <button (click)="signOut()" class="button bg-red-900 text-white rounded border m-4 h-10 w-20">Sign Out</button>
+    </div>
+    <div class="col-span-3 flex items-center justify-center" *ngIf="currentUser">
+        <h1 class="font-bold text-xl uppercase"> {{currentUser.username}}</h1>
+    </div>
+</div>
+<div class="grid grid-cols-12 gap-2">
+    <div *ngIf="canCreate" class="col-span-4 shadow-xl text-center font-bold pointer">
+        <h1>You can create</h1>
+        <div class="flex items-center justify-center p-2">
+            <img class="icons_permission" src="https://cdn3.iconfinder.com/data/icons/rest/30/add_order-512.png" alt=""
+                srcset="">
+        </div>
+    </div>
+    <div *ngIf="canWrite" class="col-span-4 shadow-xl text-center font-bold pointer">
+        <h1>You can write</h1>
+        <div class="flex items-center justify-center p-2">
+            <img class="icons_permission"
+                src="https://www.creativefabrica.com/wp-content/uploads/2020/03/08/write-book-icon-Graphics-3393264-1.jpg"
+                alt="" srcset="">
+        </div>
+    </div>
+    <div *ngIf="canRead" class="col-span-4 shadow-xl text-center font-bold pointer">
+        <h1>You can read</h1>
+        <div class="flex items-center justify-center p-2">
+            <img class="icons_permission" src="https://cdn-icons-png.flaticon.com/512/1870/1870196.png" alt=""
+                srcset="">
+        </div>
+
+    </div>
+</div>

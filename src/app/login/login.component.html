@@ -1,0 +1,27 @@
+<div class="w-full flex items-center justify-around">
+        <ul>
+            <li><strong>Credentials</strong></li><br>
+            <li><strong>User: </strong>  admin <strong> Password:</strong> root</li>
+            <li><strong>User: </strong>  other <strong> Password:</strong> 12345</li>
+            <li class="faded">(Also try with a random  user and pass)</li>
+        </ul>
+    <div class="w-1/2">
+        <div class="grid grid-cols-6 gap-2">
+            <div class="col-start-2 col-span-4 flex items-center justify-center">
+                <img style="height: 340px"
+                    src="https://st2.depositphotos.com/3905143/6258/v/600/depositphotos_62589313-stock-illustration-login-icon-glossy-button.jpg"
+                    alt="" srcset="">
+            </div>
+            <div class="col-start-2 col-span-4">
+                <input [(ngModel)]="user.username" class="input border rounded w-full p-1" type="text" name="" id="" placeholder="user"> 
+            </div>
+            <div class="col-start-2 col-span-4">
+                <input [(ngModel)]="user.password" class="input border rounded w-full p-1" type="password" name=""
+                    id="" placeholder="pass"> 
+            </div>
+            <div class="col-start-2 col-span-4 flex items-center justify-center my-2">
+                <button (click)="singIn()" class="button bg-blue-800 rounded border text-white p-2 w-28">Sing In</button>
+            </div>
+        </div>
+    </div>
+</div>
