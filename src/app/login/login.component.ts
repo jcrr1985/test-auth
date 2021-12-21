@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from '../interfaces/User';
 import { AuthenticationService } from '../services/authentication.service';
@@ -8,19 +8,16 @@ import { AuthenticationService } from '../services/authentication.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.sass']
 })
-export class LoginComponent implements OnInit {
-  user: User;
+export class LoginComponent {
+ public  user: User;
 
   constructor(private auth: AuthenticationService, private router: Router) {
-    this.user = { username: '', password: '', permission: { create: false, read: false, write: false } }
+    this.user = { username: '', password: '', permissions: { create: false, read: false, write: false } }
   }
 
-  ngOnInit(): void {
-  }
-
-  async singIn() {
+  async signIn() {
     try {
-      const user = await this.auth.singIn(this.user);
+      const user = await this.auth.signIn(this.user);
       this.auth.setCurrentUser(user);
       this.router.navigate(['dashboard']);
     } catch (error: any) {

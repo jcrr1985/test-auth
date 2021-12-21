@@ -2,7 +2,7 @@ export const users = [
     {
         username: "admin",
         password: "root",
-        permission: {
+        permissions: {
             create: true,
             read: true,
             write: true
@@ -11,7 +11,7 @@ export const users = [
     {
         username: "other",
         password: "12345",
-        permission: {
+        permissions: {
             create: false,
             read: true,
             write: true

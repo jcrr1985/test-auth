@@ -1,7 +1,7 @@
-import { Permission } from "./permission";
+import { Permissions } from "./permissions";
 
 export interface User {
     username: string;
     password: string;
-    permission: Permission;
+    permissions: Permissions;
 }

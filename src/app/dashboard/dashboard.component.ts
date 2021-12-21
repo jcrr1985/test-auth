@@ -22,12 +22,12 @@ export class DashboardComponent implements OnInit {
   validateDisplayPermissions() {
     const user = this.auth.getCurrentUser();
     this.currentUser = user;
-    this.canCreate = user.permission.create;
-    this.canWrite = user.permission.write;
-    this.canRead = user.permission.read;
+    this.canCreate = user.permissions.create;
+    this.canWrite = user.permissions.write;
+    this.canRead = user.permissions.read;
   }
   signOut() {
-    this.auth.singOut();
+    this.auth.signOut();
   }
 
 }
